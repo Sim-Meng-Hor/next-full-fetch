@@ -1,5 +1,14 @@
 import Image from "next/image";
 
+import { SmoothCursor } from "@/components/ui/smooth-cursor"
+
+
+interface SpringConfig {
+  damping: number // Controls how quickly the animation settles
+  stiffness: number // Controls the spring stiffness
+  mass: number // Controls the virtual mass of the animated object
+  restDelta: number // Controls the threshold at which animation is considered complete
+}
 export default function Home() {
   return (
     <div className="flex min-h-screen items-center justify-center bg-zinc-50 font-sans dark:bg-black">
@@ -34,6 +43,7 @@ export default function Home() {
             center.
           </p>
         </div>
+        <SmoothCursor />
         <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
           <a
             className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
@@ -60,6 +70,7 @@ export default function Home() {
           </a>
         </div>
       </main>
+
     </div>
   );
 }
