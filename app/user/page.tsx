@@ -8,7 +8,7 @@ const BASE_URL = process.env.NEXT_PUBLIC_API;
 
 export default async function CardProductUser() {
 
-  const response = await fetch(`${BASE_URL}/api/v1/users`)
+  const response = await fetch(`${BASE_URL}/api/v1/users?limit=100&offset=0`)
     const products: UserResponse[] = await response.json();
 
     return (
