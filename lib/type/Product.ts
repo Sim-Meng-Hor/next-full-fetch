@@ -3,9 +3,9 @@ export type ProductResponse = {
     title : string ;
     price : number ;
     description : string ;
-    slug : string ;
     category : Category;
-    images : [""];
+    slug : string ;
+    images : [" "];
 
 }
 

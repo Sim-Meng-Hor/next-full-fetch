@@ -9,6 +9,7 @@ import {
     CardTitle,
 } from "@/components/ui/card"
 import {UserResponse} from "../../lib/type/user";
+import Image from "next/image";
 
 export function ProductUserCard({id, name,avatar,roles}:UserResponse) {
     return (
@@ -16,6 +17,7 @@ export function ProductUserCard({id, name,avatar,roles}:UserResponse) {
             <div className="absolute inset-0 z-30 aspect-video bg-black/35" />
             <img
                 src={avatar}
+            
                 alt="Event cover"
                 className="relative z-20 aspect-video w-full object-cover brightness-60 grayscale dark:brightness-40"
             />

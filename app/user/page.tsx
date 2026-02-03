@@ -1,6 +1,4 @@
 
-
-
 import { UserResponse } from "../../lib/type/user";
 import { ProductUserCard } from "../../Components/i-tech-cards/ProductUser";
 
@@ -8,7 +6,7 @@ const BASE_URL = process.env.NEXT_PUBLIC_API;
 
 export default async function CardProductUser() {
 
-  const response = await fetch(`${BASE_URL}/api/v1/users?limit=100&offset=0`)
+  const response = await fetch(`${BASE_URL}/api/v1/users`)
     const products: UserResponse[] = await response.json();
 
     return (
